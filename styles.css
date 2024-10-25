@@ -1,0 +1,171 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+/*---------轮播图格式start--------*/
+#box {
+    width: 100%;
+    height: 600px;
+    overflow: hidden;
+    position: relative;
+    display: flex;
+    justify-content: center;   /*---------轮播图放水平中央--------*/
+}
+
+#lunboimg {
+    width: 80%;
+    height: 100%;
+    position: absolute;
+    display: flex;
+}
+
+img {
+    width: 100%;
+    height: 100%;
+}
+
+#lunboimg:hover #selector {   /*---------当鼠标放在轮播图上才显示导航点--------*/
+    display: flex;
+}
+
+#selector {
+    width: 150px;
+    height: 30px;
+    position: absolute;
+    bottom: 0;
+    left: 50%;               /*---------导航点容器位于轮播图的水平中央--------*/
+    transform: translateX(-50%); /* 向左移动自身高度的一半，实现水平居中 */
+    display: none;          /*---------导航点容器默认不显示--------*/
+    justify-content: space-between;  /*---------导航点间距相同且左右贴紧容器--------*/
+    z-index: 100;           /*---------导航点容器位于轮播图堆叠之上--------*/
+}
+
+#selector>span {
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;     /*---------导航点为圆形--------*/
+    background-color: lightsalmon;
+    opacity: 0.8;
+    cursor: pointer;
+}
+
+#selector>span:hover {
+    background-color: #555454;
+}
+
+#lunboimg:hover #left{
+    display: block;
+}
+
+#lunboimg:hover #right{
+    display: block;
+}
+
+#left,#right{
+    width: 40px;
+    height: 40px;
+    position: absolute;
+    top: 50%; /* 相对于父元素垂直居中 */  
+    transform: translateY(-50%); /* 向上移动自身高度的一半，实现垂直居中 */
+    background-color: lightsteelblue;
+    font-size: 20px;
+    border-radius: 50%;
+    text-align: center;
+    line-height: 40px;
+    cursor: pointer;
+    color: lightslategray;
+    display: none;
+}
+#left{
+    left: 0;
+}
+#right{
+    right: 0;
+}
+#left:hover,#right:hover{
+    background-color: #8A8A8A;
+    color: #FFFFFF;
+}
+/*---------轮播图格式end--------*/
+
+body {  
+    margin: 0;  
+    padding: 0;  
+    font-family: Arial, sans-serif;  
+}   
+header {
+            background: linear-gradient(to right, #4A90E2, #007AFF);
+            color: white;
+            height: 50px;
+            padding: 0 20px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+        
+
+header span {   
+    font-size: 18px;
+   text-align: right;
+}  
+  
+nav {  
+    display: flex;   
+    background-color: white; /* 导航背景色可以根据需要设置 */ 
+    padding: 0;  
+    margin: 0; 
+    align-items: center; /* 垂直居中，如果需要的话 */  
+    justify-content: space-between; /* 让元素在水平方向上尽可能分开 */ 
+}  
+nav img {
+    height: 70px; /* 设置图片高度，根据你的需求调整 */  
+    margin-left:100px;
+    width:auto;  
+} 
+nav ul {  
+    list-style-type: none;  
+    margin: 0; 
+}  
+  
+nav ul li {  
+  display: inline-block;
+  flex: 1; /* 这将使所有列表项尽可能等宽 */   
+  border-left: 2px solid #ccc; /* 边框宽度、样式和颜色 */  
+  height: 70px; /* 与图片高度相同，以便对齐 */
+  line-height: 70px;
+  text-align: center; /* 文本居中对齐 */
+  padding: 0 7px 0 7px;
+  margin: 0; 
+}  
+nav ul li a {  
+    text-decoration: none; 
+    color: #333;  
+}  
+main {  
+background-color: #f0f0f0; 
+padding: 0;
+margin: 0;  
+}
+footer {
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 0px;
+    bottom: 0;
+    width: 100%;
+    height: 35px;
+}
+h2 {
+    margin: 0;
+}
+.logo-container {
+    display: flex;
+    align-items: center;
+}
+
+.logo-text {
+    margin-left: 10px;
+}
